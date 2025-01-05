@@ -1,0 +1,28 @@
+// for in loop
+const myobject = {
+    js: 'Javascript',
+    cpp: "c++",
+    rb: "ruby",
+    swift: "swift by apple"
+}
+
+for (const [key,value] in myobject) {
+    //console.log(`${key} shortcut is for ${myobject[key]}`);
+}
+
+const programming = ["js", "rb", "py", "java", "cpp"]
+for (const key in programming) {
+    // console.log(programming[key]);
+}
+
+const map = new Map()
+map.set("IN", "INDIA")
+map.set("FR", "FRANCE")
+map.set("USA", "UNITED STATES OF AMERICA")
+map.set("IN", "INDIA")
+
+for (const key in map) {
+   console.log(key);
+   
+}
+// maps are not iterable isiliye iterate nhi hoga
