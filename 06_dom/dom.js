@@ -12,7 +12,7 @@ document.getElementById('title').setAttribute('class', 'text') // aise class ko 
 title.style.padding = "20px" // se hum styling kar sakte hai
 
 title.innerText // jo page pe visible hai vo hi dikhta hai 
-title.textContent // agar koi chiz koi property kr vaje se nhi dikh rahi hai tho vo bhi is method se dikhegi
+title.textContent // agar koi chiz koi property ke vaje se nhi dikh rahi hai tho vo bhi is method se dikhegi
 title.innerHTML // isse sare html tags vagera sab dikhata hai
 
 document.querySelectorAll() // isse sare elements select ho jate hai
