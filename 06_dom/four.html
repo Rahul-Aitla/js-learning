@@ -10,4 +10,37 @@
         <li>Javascript</li>
     </ul>
 </body>
+<script>
+    // adding element
+    function addLanguage(langName) {
+        const li = document.createElement('li'); // yaha pe element ko create kar rahe hai
+        li.innerHTML = `${langName}` // .innerHTML se text lenge ko display hoga (is method ke vaja se pure class ko traverse karke append hota hai means jyada memory khata hai)
+        document.querySelector('.language').appendChild(li) // yaha pe appendChild se text reallly display hoga
+    }
+    addLanguage("Python")
+    addLanguage("Java")
+
+    // optimum way to add element
+    function addOptiLanguage(langName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName)); // .createTextNode se traverse nhi hota hai aur direct append ho jata hai memory wastage nhi hota
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage("C++")
+
+    // Edit element
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML = "Golang" 
+    const newli = document.createElement('li')
+    newli.textContent = "Ruby"
+    secondLang.replaceWith(newli) 
+
+    // edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>React</li>'
+
+    //remove
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove() // .remove() se element ko remove kar sakte hai
+</script>
 </html>
